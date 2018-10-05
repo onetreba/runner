@@ -22,6 +22,7 @@ public class CharacterController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
         bool isGrounded = Physics2D.OverlapCircle(GroundPoint.transform.position, 0.1f, GroundLayer);
 
         if (isGrounded && _rigidbody.velocity.y < 0)
