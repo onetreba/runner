@@ -29,7 +29,7 @@ public class CharacterController : MonoBehaviour {
             _currentJumpsCount = 0;
         }
 
-        if (Input.GetButtonUp("Jump"))
+        if (Input.GetButtonDown("Jump") || Input.touchCount > 0)
         {
             if(_currentJumpsCount < JumpsAvailable)
             {
