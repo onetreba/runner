@@ -22,7 +22,6 @@ public class CharacterController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
         bool isGrounded = Physics2D.OverlapCircle(GroundPoint.transform.position, 0.1f, GroundLayer);
 
         if (isGrounded && _rigidbody.velocity.y < 0)
@@ -30,7 +29,7 @@ public class CharacterController : MonoBehaviour {
             _currentJumpsCount = 0;
         }
 
-        if (Input.GetButtonDown("Jump") || Input.touchCount > 0)
+        if (Input.GetButtonDown("Jump"))
         {
             if(_currentJumpsCount < JumpsAvailable)
             {
