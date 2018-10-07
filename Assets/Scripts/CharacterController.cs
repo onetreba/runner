@@ -18,6 +18,7 @@ public class CharacterController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         _rigidbody = GetComponent<Rigidbody2D>();
+        _rigidbody.velocity = new Vector2(Speed, _rigidbody.velocity.y);
     }
 	
 	// Update is called once per frame
@@ -39,7 +40,5 @@ public class CharacterController : MonoBehaviour {
                 _currentJumpsCount++;
             }
         }
-
-        _rigidbody.velocity = new Vector2(Speed, _rigidbody.velocity.y);
     }
 }
